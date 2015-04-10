@@ -27,12 +27,8 @@ public class PolygonEqualityTests {
 
     @Test
     public void polygonsAreEqualIfTheyContainTheSamePointsInTheSameOrder() {
-        // Given
-        Polygon polygon = standardPolygon();
-        Polygon samePolygon = standardPolygon();
-
         // Then
-        assertThat(polygon.equals(samePolygon), is(true));
+        assertThat(standardPolygon().equals(standardPolygon()), is(true));
     }
 
     @Test
