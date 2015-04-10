@@ -6,9 +6,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 public class PolygonEqualityTests {
-    private static final Point2D POINT_A = point(0, 0);
-    private static final Point2D POINT_B = point(0, 1);
-    private static final Point2D POINT_C = point(1, 1);
+    private static final Point2D POINT_A = Point2D.at((double) 0, (double) 0);
+    private static final Point2D POINT_B = Point2D.at((double) 0, (double) 1);
+    private static final Point2D POINT_C = Point2D.at((double) 1, (double) 1);
 
     @Rule
     public ExpectedException exception = ExpectedException.none();
@@ -21,8 +21,8 @@ public class PolygonEqualityTests {
 
         // When
         new Polygon(
-                point(0,0),
-                point(0,1));
+                Point2D.at((double) 0, (double) 0),
+                Point2D.at((double) 0, (double) 1));
     }
 
     @Test
@@ -67,9 +67,5 @@ public class PolygonEqualityTests {
                 POINT_A,
                 POINT_B,
                 POINT_C);
-    }
-
-    private static Point2D point(double x, double y) {
-        return new Point2D(x, y);
     }
 }

@@ -7,26 +7,23 @@ public class PointEqualityTests {
 
     @Test
     public void pointDoesNotEqualNull() {
-        assertThat(point(0, 0).equals(null), is(false));
+        assertThat(Point2D.at(0, 0).equals(null), is(false));
     }
 
     @Test
     public void pointDoesNotEqualObjectOfDifferentType() {
-        assertThat(point(0, 0).equals(""), is(false));
+        assertThat(Point2D.at(0, 0).equals(""), is(false));
     }
 
     @Test
     public void pointsAreNotEqualIfCoordinatesAreDifferent() {
-        assertThat(point(0, 0).equals(point(1, 0)), is(false));
-        assertThat(point(0, 0).equals(point(0, 1)), is(false));
+        assertThat(Point2D.at(0, 0).equals(Point2D.at(1, 0)), is(false));
+        assertThat(Point2D.at(0, 0).equals(Point2D.at(0, 1)), is(false));
     }
 
     @Test
     public void pointsAreEqualIfCoordinatesAreSame() {
-        assertThat(point(1, 1).equals(point(1, 1)), is(true));
+        assertThat(Point2D.at(1, 1).equals(Point2D.at(1, 1)), is(true));
     }
 
-    private Point2D point(double x, double y) {
-        return new Point2D(x, y);
-    }
 }

@@ -18,4 +18,8 @@ public class Point2D {
                 && point.x == x
                 && point.y == y;
     }
+
+    public static Point2D at(double x, double y) {
+        return new Point2D(x, y);
+    }
 }
