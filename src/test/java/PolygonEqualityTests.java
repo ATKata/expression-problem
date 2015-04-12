@@ -27,7 +27,6 @@ public class PolygonEqualityTests {
 
     @Test
     public void polygonsAreEqualIfTheyContainTheSamePointsInTheSameOrder() {
-        // Then
         assertThat(standardPolygon().equals(standardPolygon()), is(true));
     }
 
@@ -43,25 +42,13 @@ public class PolygonEqualityTests {
 
     @Test
     public void polygonDoeNotEqualPolygonWithPointsInADifferentOrder() {
-        // Given
-        Polygon polygon = new Polygon(
-                POINT_A,
-                POINT_B,
-                POINT_C);
+        Polygon polygon1 = new Polygon(POINT_A, POINT_B, POINT_C);
+        Polygon polygon2 = new Polygon(POINT_B, POINT_C, POINT_A);
 
-        Polygon otherPolygon = new Polygon(
-                POINT_B,
-                POINT_C,
-                POINT_A);
-
-        // Then
-        assertThat(polygon.equals(otherPolygon), is(false));
+        assertThat(polygon1.equals(polygon2), is(false));
     }
 
     private static Polygon standardPolygon() {
-        return new Polygon(
-                POINT_A,
-                POINT_B,
-                POINT_C);
+        return new Polygon(POINT_A, POINT_B, POINT_C);
     }
 }
