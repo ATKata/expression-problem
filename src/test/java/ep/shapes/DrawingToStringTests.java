@@ -20,5 +20,4 @@ public class DrawingToStringTests {
         Drawing drawing = new Drawing(new Line(Point2D.at(1,2),Point2D.at(3,4)));
         assertThat(drawing.toString(), equalTo("Drawing\nLine [Start = (1,2), End = (3,4)]"));
     }
-
 }

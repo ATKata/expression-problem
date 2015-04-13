@@ -1,8 +1,8 @@
 package ep.shapes;
 
 public class Line implements Shape {
-    private final Point2D start;
-    private final Point2D end;
+    public final Point2D start;
+    public final Point2D end;
 
     public Line(Point2D start, Point2D end) {
         this.start = start;
@@ -18,10 +18,5 @@ public class Line implements Shape {
         Line other = (Line) obj;
         return other.start.equals(start)
                 && other.end.equals(end);
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Line [Start = %s, End = %s]",start.toString(),end.toString());
     }
 }

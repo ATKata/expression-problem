@@ -1,8 +1,8 @@
 package ep.shapes;
 
 public class Point2D {
-    private final double x;
-    private final double y;
+    public final double x;
+    public final double y;
 
     public Point2D(double x, double y) {
         this.x = x;
@@ -22,9 +22,5 @@ public class Point2D {
 
     public static Point2D at(double x, double y) {
         return new Point2D(x, y);
-    }
-
-    public String toString() {
-        return String.format("(%s,%s)",(int)x,(int)y);
     }
 }

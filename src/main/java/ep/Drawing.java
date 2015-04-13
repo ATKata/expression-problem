@@ -1,6 +1,6 @@
 package ep;
 
-import ep.shapes.Shape;
+import ep.shapes.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,8 +30,15 @@ public class Drawing {
     public String toString() {
         String s = "Drawing";
         for (Shape shape : shapes) {
-            s += "\n" + shape.toString();
+            s += "\n" + stringForShape(shape);
         }
         return s;
     }
+
+    private String stringForShape(Shape shape) {
+        Drawer drawer = ShapeDrawerFactory.getDrawer(shape);
+        return drawer.draw();
+    }
+
+
 }
