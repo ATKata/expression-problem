@@ -14,8 +14,7 @@ public class Point2D {
         }
 
         Point2D point = (Point2D) obj;
-        return point != null
-                && point.x == x
+        return point.x == x
                 && point.y == y;
     }
 

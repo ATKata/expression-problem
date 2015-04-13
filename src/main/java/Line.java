@@ -14,8 +14,7 @@ public class Line {
         }
 
         Line other = (Line) obj;
-        return other != null
-                && other.start.equals(start)
+        return other.start.equals(start)
                 && other.end.equals(end);
     }
 }
