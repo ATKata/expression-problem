@@ -1,3 +1,7 @@
+package ep;
+
+import ep.shapes.Shape;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,10 +12,6 @@ public class Drawing {
         this.shapes = Arrays.asList(shapes);
     }
 
-    public static Drawing withShapes(Shape... shapes) {
-        return new Drawing(shapes);
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof Drawing)) {
@@ -20,5 +20,9 @@ public class Drawing {
 
         Drawing other = (Drawing) obj;
         return other.shapes.equals(shapes);
+    }
+
+    public static Drawing withShapes(Shape... shapes) {
+        return new Drawing(shapes);
     }
 }
