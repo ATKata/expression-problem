@@ -1,4 +1,4 @@
-public class Line {
+public class Line implements Shape {
     private final Point2D start;
     private final Point2D end;
 

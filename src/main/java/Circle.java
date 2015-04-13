@@ -1,4 +1,4 @@
-public class Circle {
+public class Circle implements Shape {
     private final Point2D centre;
     private final int radius;
 

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class Polygon {
+public class Polygon implements Shape {
 
     private final List<Point2D> points;
 
