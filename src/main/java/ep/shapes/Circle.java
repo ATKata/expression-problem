@@ -19,4 +19,9 @@ public class Circle implements Shape {
         return other.centre.equals(centre)
                 && other.radius == radius;
     }
+
+    @Override
+    public void visit(ShapeVisitor shapeVisitor) {
+        shapeVisitor.visit(this);
+    }
 }

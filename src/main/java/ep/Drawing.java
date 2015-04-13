@@ -28,16 +28,11 @@ public class Drawing {
 
     @Override
     public String toString() {
-        String s = "Drawing";
+        ShapeDrawer drawer = new ShapeDrawer();
         for (Shape shape : shapes) {
-            s += "\n" + stringForShape(shape);
+            shape.visit(drawer);
         }
-        return s;
-    }
-
-    private String stringForShape(Shape shape) {
-        Drawer drawer = ShapeDrawerFactory.getDrawer(shape);
-        return drawer.draw();
+        return "Drawing" + drawer.getShapeStrings();
     }
 
 

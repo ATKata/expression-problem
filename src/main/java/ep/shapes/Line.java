@@ -19,4 +19,9 @@ public class Line implements Shape {
         return other.start.equals(start)
                 && other.end.equals(end);
     }
+
+    @Override
+    public void visit(ShapeVisitor shapeVisitor) {
+        shapeVisitor.visit(this);
+    }
 }

@@ -24,4 +24,9 @@ public class Polygon implements Shape {
         Polygon other = (Polygon) obj;
         return other.points.equals(points);
     }
+
+    @Override
+    public void visit(ShapeVisitor shapeVisitor) {
+        shapeVisitor.visit(this);
+    }
 }
