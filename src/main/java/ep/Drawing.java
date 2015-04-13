@@ -25,4 +25,13 @@ public class Drawing {
     public static Drawing withShapes(Shape... shapes) {
         return new Drawing(shapes);
     }
+
+    @Override
+    public String toString() {
+        String s = "Drawing";
+        for (Shape shape : shapes) {
+            s += "\n" + shape.toString();
+        }
+        return s;
+    }
 }

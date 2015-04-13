@@ -19,4 +19,9 @@ public class Line implements Shape {
         return other.start.equals(start)
                 && other.end.equals(end);
     }
+
+    @Override
+    public String toString() {
+        return String.format("Line [Start = %s, End = %s]",start.toString(),end.toString());
+    }
 }
