@@ -22,6 +22,6 @@ toString() spec:
 Drawing
 -------
 Circle [Centre = (1,2), Radius = 4]
-Line [Start = (3,4), End = 5, 6]
+Line [Start = (3,4), End = (5,6)]
 Polygon [(0,0), (1,1), (2,2), (3,3)]
 ```
